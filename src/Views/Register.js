@@ -26,19 +26,19 @@ function Register(){
                     <form>
                     <div className="input-form">
                                     <label className="custom-field ">
-                                            <input  type="text" />
+                                            <input  type="text" required/>
                                             <span  className="placeholder">  Enter your First Name </span>
                                     </label>
                             </div>
                          <div className="input-form">
                                     <label className="custom-field ">
-                                            <input  type="text" />
+                                            <input  type="text" required />
                                             <span  className="placeholder">  Enter your Last Name </span>
                                     </label>
                             </div>
                             <div className="input-form">
                                     <label className="custom-field ">
-                                            <input  type="email" />
+                                            <input  type="email"  required/>
                                             <span  className="placeholder">  Enter your ncu email address </span>
                                             <img  src={ eyeicon} alt="eyeicon" />
                                     </label>
@@ -46,14 +46,14 @@ function Register(){
                             
                             <div className="input-form">
                                     <label className="custom-field ">
-                                            <input type="password" />
+                                            <input type="password"  required/>
                                             <span  className="placeholder">  Enter your password </span>
                                             <img  src={ lock} alt="eyeicon" />
                                     </label>
                             </div>
                             <div className="input-form">
                                     <label className="custom-field ">
-                                            <input type="password" />
+                                            <input type="password"  required/>
                                             <span  className="placeholder">  Confirm password </span>
                                             <img  className="orange" src={ unlock} alt="eyeicon" />
                                     </label>
