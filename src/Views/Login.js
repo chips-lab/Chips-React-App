@@ -5,7 +5,6 @@ import  PrimaryBtn from "../components/Primarybtn"
 import  logo from "../assets/image/logo_black.png";
 import  eyeicon  from "../assets/icons/envelope.svg";
 import passicon from "../assets/icons/eye-alt.svg";
-import Register from "../Views/Register";
 import {Route, BrowserRouter as Router, Link} from  "react-router-dom"
 
 function Login(){
@@ -36,7 +35,9 @@ function Login(){
                                             <span  className="placeholder">  Enter your password </span>
                                             <img  src={ passicon} alt="eyeicon" />
                                             <div className="forgotpass">
-                                            <a>Forgot?</a>
+                                                <Link to="/forgot">
+                                                         Forgot?
+                                                </Link>
                                     </div>
                                     </label>
                             </div>

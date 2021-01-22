@@ -230,5 +230,11 @@ margin: 10px   0px  0px  0px;
   padding: 20px;
 }
 
+.animeCon {
+      width: 260px;
+      align-content: center;
+      justify-content: center;
+      display: inline-block;
+}
 
 /*  End of  LOGIN STYLING   ----------------------------------------------------------------*/

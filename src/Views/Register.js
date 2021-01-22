@@ -58,7 +58,7 @@ function Register(){
                                             <img  className="orange" src={ unlock} alt="eyeicon" />
                                     </label>
                             </div>
-                            <DefaultButton >CREATE</DefaultButton>
+                            <DefaultButton >START CODING</DefaultButton>
                     </form>
 
                     <div className="login-options">
