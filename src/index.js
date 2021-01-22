@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from  "styled-components";
 import  * as  theme  from  "./config/theme";
-
+import {Route, BrowserRouter as Router} from  "react-router-dom"
 
 
 ReactDOM.render(

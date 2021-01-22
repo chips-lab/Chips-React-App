@@ -5,7 +5,7 @@ import  PrimaryBtn from "../components/Primarybtn"
 import  logo from "../assets/image/logo_black.png";
 import  eyeicon  from "../assets/icons/envelope.svg";
 import passicon from "../assets/icons/eye-alt.svg";
-
+import {Route, BrowserRouter as Router, Link} from  "react-router-dom"
 
 function Login(){
 
@@ -23,7 +23,7 @@ function Login(){
                     <form>
                             <div className="input-form">
                                     <label className="custom-field ">
-                                            <input  type="email" />
+                                            <input  type="email"  required/>
                                             <span  className="placeholder">  Enter your ncu email address </span>
                                             <img  src={ eyeicon} alt="eyeicon" />
                                     </label>
@@ -31,11 +31,13 @@ function Login(){
                             
                             <div className="input-form">
                                     <label className="custom-field ">
-                                            <input type="password" />
+                                            <input type="password"  required/>
                                             <span  className="placeholder">  Enter your password </span>
                                             <img  src={ passicon} alt="eyeicon" />
                                             <div className="forgotpass">
-                                            <a>Forgot?</a>
+                                                <Link to="/forgot">
+                                                         Forgot?
+                                                </Link>
                                     </div>
                                     </label>
                             </div>
@@ -47,8 +49,12 @@ function Login(){
                                 <input type="checkbox"></input>
                                 <a>Remember me</a>
                             </div>
-                            <div  className="no-account">
-                                    <p>no account <a>Sign up</a></p>
+                            <div  className="no-account">    
+                                 <p>no account  
+                                     <Link to="/register">
+                                                Sign up
+                                     </Link>
+                                 </p>
                             </div>
                     </div>
 
