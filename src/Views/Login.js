@@ -5,7 +5,8 @@ import  PrimaryBtn from "../components/Primarybtn"
 import  logo from "../assets/image/logo_black.png";
 import  eyeicon  from "../assets/icons/envelope.svg";
 import passicon from "../assets/icons/eye-alt.svg";
-
+import Register from "../Views/Register";
+import {Route, BrowserRouter as Router, Link} from  "react-router-dom"
 
 function Login(){
 
@@ -47,8 +48,12 @@ function Login(){
                                 <input type="checkbox"></input>
                                 <a>Remember me</a>
                             </div>
-                            <div  className="no-account">
-                                    <p>no account <a>Sign up</a></p>
+                            <div  className="no-account">    
+                                 <p>no account  
+                                     <Link to="/register">
+                                                Sign up
+                                     </Link>
+                                 </p>
                             </div>
                     </div>
 
