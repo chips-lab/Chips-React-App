@@ -5,9 +5,17 @@ import  PrimaryBtn from "../components/Primarybtn"
 import  logo from "../assets/image/logo_black.png";
 import  eyeicon  from "../assets/icons/envelope.svg";
 import passicon from "../assets/icons/eye-alt.svg";
-import {Route, BrowserRouter as Router, Link} from  "react-router-dom"
+import {Route, BrowserRouter as Router, Link} from  "react-router-dom";
+import  useForm from  "../hooks/useForm";
+import   validate from "../config/validate";
 
 function Login(){
+
+        const {handleSubmit, handleChange , value, errors}= useForm(submit, validate);
+
+         function submit(){   
+                console.log("success")
+         }
 
         return(
                 <div className="Login--screen">
@@ -20,18 +28,28 @@ function Login(){
                     </div>
 
                   
-                    <form>
+                    <form  onSubmit={handleSubmit} noValidate>
                             <div className="input-form">
                                     <label className="custom-field ">
-                                            <input  type="email"  required/>
+                                            <input  type="email"  
+                                                required
+                                                name="username"
+                                                value={value.email} 
+                                                onChange={handleChange}
+                                            />
                                             <span  className="placeholder">  Enter your ncu email address </span>
                                             <img  src={ eyeicon} alt="eyeicon" />
                                     </label>
                             </div>
-                            
+                            {errors.username && <p className="error">{errors.username}</p>}
                             <div className="input-form">
                                     <label className="custom-field ">
-                                            <input type="password"  required/>
+                                            <input type="password"  
+                                                name="password" 
+                                                required
+                                                value={value.password} 
+                                                onChange={handleChange}
+                                            />
                                             <span  className="placeholder">  Enter your password </span>
                                             <img  src={ passicon} alt="eyeicon" />
                                             <div className="forgotpass">
@@ -41,7 +59,8 @@ function Login(){
                                     </div>
                                     </label>
                             </div>
-                            <DefaultButton >HACK IN</DefaultButton>
+                            {errors.password && <p className="error">{errors.password}</p>}
+                            <DefaultButton  onClick={submit}>HACK IN</DefaultButton>
                     </form>
 
                     <div className="login-options">

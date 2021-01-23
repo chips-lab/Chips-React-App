@@ -37,7 +37,7 @@ function Forgot(){
                     <form>
                             <div className="input-form">
                                     <label className="custom-field ">
-                                            <input  type="email" />
+                                            <input  type="email"  required/>
                                             <span  className="placeholder">  Enter your ncu email address </span>
                                             <img  src={ eyeicon} alt="eyeicon" />
                                     </label>
@@ -48,7 +48,7 @@ function Forgot(){
                     <div className="login-options">
                             <div  className="account">    
                                  <p>Already have an account  
-                                     <Link to="/register">
+                                     <Link to="/">
                                                 Sign in
                                      </Link>
                                  </p>
